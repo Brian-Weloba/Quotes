@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Quotes</h1>
+    <div class="row-fluid">
+        <div class="col">
+            <div *ngFor='let quote of quotes; let i = index'>
+                <div>
+                    <h2>{{quote.id}}. {{quote.quote}}</h2>
+                    <h4>~{{quote.author}}</h4>
+                    <app-quote-detail [quote]='quote'></app-quote-detail>
+                </div>
+
+            </div>
+        </div>
+    </div>
