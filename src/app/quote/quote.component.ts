@@ -8,6 +8,16 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
 
+  quoteDelete(deleteQuote,index){
+    if(deleteQuote){
+      this.quotes.splice(index, 1);
+    }
+  }
+
+  toggleDetails(index){
+    this.quotes[index].showDetails=!this.quotes[index].showDetails;
+  }
+
   quotes:Quote[]=[
     new Quote(1, 'In the fight between you and the world, back the world.', 'Franz Kafka', 'Solomon', new Date(2020, 5, 7)),
     new Quote(2, 'He who has a why to live can bear almost any how.', 'Friedrich Nietzsche', 'Cindy', new Date(2019, 7, 8)),
