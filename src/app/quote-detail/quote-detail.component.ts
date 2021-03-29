@@ -1,4 +1,5 @@
 import { EventEmitter } from '@angular/core';
+import { ElementRef } from '@angular/core';
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { Quote } from '../quote';
 
@@ -9,31 +10,25 @@ import { Quote } from '../quote';
 })
 export class QuoteDetailComponent implements OnInit {
 
-@Input() quotes:Quote[];
+  constructor() { }
+
   @Input() quote: Quote;
   @Output() deleteQuote = new EventEmitter<boolean>();
 
-  quoteDelete(toDelete:boolean){
+
+  quoteDelete(toDelete: boolean) {
     this.deleteQuote.emit(toDelete);
   }
 
-  upvote(){
+  upvote() {
     this.quote.upvotes++;
     this.quote.score++;
   }
 
-  downvote(){
+  downvote() {
     this.quote.downvotes++;
     this.quote.score--;
   }
-
-  getMax(quotes: Quote[]) {
-    let maxObj = quotes.reduce((max, obj) => (max.score > obj.score) ? max : obj);
-    console.log(quotes.indexOf(maxObj));
-    return maxObj;
-  }
-
-  constructor() { }
 
   ngOnInit(): void {
   }

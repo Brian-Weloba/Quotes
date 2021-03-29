@@ -1,15 +1,18 @@
 export class Quote {
-  showDetails:boolean;
+  showDetails: boolean;
+  upvotes: number
+  downvotes: number
+  score: number
   constructor(
-    public id:number,
-    public quote:string,
-    public author:string,
-    public user:string,
-    public date:Date,
-    public upvotes:number,
-    public downvotes:number,
-    public score :number
-  ){
+    public id: number,
+    public quote: string,
+    public author: string,
+    public user: string,
+    public date: Date
+  ) {
     this.showDetails = false;
+    this.upvotes = 0
+    this.downvotes = 0
+    this.score = 0
   }
 }
