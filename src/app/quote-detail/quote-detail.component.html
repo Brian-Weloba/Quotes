@@ -1,4 +1,5 @@
-<p>
-    Posted by {{quote.user}} on {{quote.date|date}}.
-    <button (click)='quoteDelete(true)'>Delete Quote</button>
-</p>
+<p>Posted by {{quote.user}} on {{quote.date|date}}.{{quote.date|dateCount}} days ago.</p>
+<button (click)='upvote()'>Like</button>
+<p>{{quote.votes}} votes</p>
+<button (click)='downvote()'>Dislike</button>
+<button (click)='quoteDelete(true)'>Delete Quote</button>
