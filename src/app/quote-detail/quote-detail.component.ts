@@ -9,6 +9,7 @@ import { Quote } from '../quote';
 })
 export class QuoteDetailComponent implements OnInit {
 
+@Input() quotes:Quote[];
   @Input() quote: Quote;
   @Output() deleteQuote = new EventEmitter<boolean>();
 
@@ -17,11 +18,19 @@ export class QuoteDetailComponent implements OnInit {
   }
 
   upvote(){
-    this.quote.votes++;
+    this.quote.upvotes++;
+    this.quote.score++;
   }
 
   downvote(){
-    this.quote.votes--;
+    this.quote.downvotes++;
+    this.quote.score--;
+  }
+
+  getMax(quotes: Quote[]) {
+    let maxObj = quotes.reduce((max, obj) => (max.score > obj.score) ? max : obj);
+    console.log(quotes.indexOf(maxObj));
+    return maxObj;
   }
 
   constructor() { }

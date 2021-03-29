@@ -7,7 +7,7 @@
                     <h2>{{i+1}}. {{quote.quote}}</h2>
                     <h4>~{{quote.author}}</h4>
                     <button (click)='toggleDetails(i)'>Show Details</button>
-                    <app-quote-detail *ngIf='quote.showDetails' [quote]='quote' (deleteQuote)='quoteDelete($event,i)'></app-quote-detail>
+                    <app-quote-detail *ngIf='quote.showDetails' [quote]='quote' [quotes]='quotes' (deleteQuote)='quoteDelete($event,i)'></app-quote-detail>
                 </div>
 
             </div>

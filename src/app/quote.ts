@@ -6,7 +6,9 @@ export class Quote {
     public author:string,
     public user:string,
     public date:Date,
-    public votes:number
+    public upvotes:number,
+    public downvotes:number,
+    public score :number
   ){
     this.showDetails = false;
   }
