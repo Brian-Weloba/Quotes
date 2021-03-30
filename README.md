@@ -10,10 +10,6 @@ A simple  Angular app that lets users add their own quotes and vote for their fa
 
 The site was published on [Netlify](https://app.netlify.com/).
 
-## Page Preview
-
-![alt screenshot](screenshot.png)
-
 ## Setup
 
 ### Development server
