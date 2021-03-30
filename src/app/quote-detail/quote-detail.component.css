@@ -4,4 +4,7 @@
 
 button {
     font-size: 18px;
+    border-radius: 25px;
+    font-family: 'dosis-bold';
+    border: 2px solid #eef0f2;
 }
