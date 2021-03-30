@@ -1,1 +1,47 @@
-<p>quote-form works!</p>
+<div class="container-fluid">
+    <h2 class="text-center">Add Quote</h2>
+    <hr>
+    <form (ngSubmit)='submitQuote(quoteForm)' #quoteForm='ngForm'>
+        <div class="form-group">
+
+            <label for="quotes">Quote</label>
+            <textarea required rows="4" class="form-control" id="quotes" name="quotes" [(ngModel)]="newQuote.quote" #quotes='ngModel' [ngClass]="{'is-invalid': (quotes.touched || quotes.dirty) && !quotes.valid }"></textarea>
+            <span class="invalid-feedback">
+              <span *ngIf="quotes.errors?.required">
+                <p>This field is required</p>
+              </span>
+            </span>
+        </div>
+        <div class="form-group">
+
+            <label for="author">Author</label>
+            <input type="text" required class="form-control" id="author" name="author" [(ngModel)]="newQuote.author" #author="ngModel" [ngClass]="{'is-invalid': (author.touched || author.dirty) && !author.valid }">
+            <span class="invalid-feedback">
+              <span *ngIf="author.errors?.required">
+                <p>This field is required</p>
+              </span>
+            </span>
+
+        </div>
+        <div class="form-group">
+
+            <label for="user">Posted by</label>
+            <input type="text" required class="form-control" id="user" name="user" [(ngModel)]="newQuote.user" #user="ngModel" [ngClass]="{'is-invalid': (user.touched || user.dirty) && !user.valid }">
+            <span class="invalid-feedback">
+              <span *ngIf="user.errors?.required">
+                <p>This field is required</p>
+              </span>
+            </span>
+        </div>
+        <!-- <div class="form-group">
+
+            <label for="date">Date</label>
+            <input type="date" required class="form-control" id="date" name="date" [(ngModel)]="newQuote.date" #date="ngModel">
+            <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
+                <p>This field is required</p>
+            </div>
+
+        </div> -->
+        <button type="submit" class="btn btn-success" [disabled]="!quoteForm.valid">Add quote</button>
+    </form>
+</div>

@@ -39,7 +39,12 @@ export class QuoteComponent implements OnInit {
     new Quote('He who has a why to live can bear almost any how.', 'Friedrich Nietzsche', 'Cindy', new Date(2019, 7, 8)),
     new Quote('One day, in retrospect, the years of struggle will strike you as the most beautiful.', 'Sigmund Freud', 'Stew', new Date(2021, 2, 9)),
     new Quote('Show me a sane man and I will cure him for you.', 'Carl Jung', 'Denzel', new Date(2021, 2, 15))
-  ]
+  ];
+
+  addNewQuote(newQuote){
+    newQuote.date = new Date(newQuote.date);
+    this.quotes.push(newQuote);
+  }
 
 
   constructor() { }
