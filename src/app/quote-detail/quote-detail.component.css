@@ -8,3 +8,14 @@ button {
     font-family: 'dosis-bold';
     border: 2px solid #eef0f2;
 }
+
+#point:hover,
+#point:focus {
+    background-color: transparent;
+    color: #eef0f2;
+    box-shadow: none;
+}
+
+#vote:focus {
+    box-shadow: none;
+}

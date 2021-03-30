@@ -17,8 +17,8 @@
                         <h4>~{{quote.author |uppercase}}</h4>
                     </div>
                 </div>
-                <button class="btn btn-outline-light" (click)='toggleDetails(i)'>Toggle Details</button>
-                <app-quote-detail *ngIf='quote.showDetails' [quote]='quote' (deleteQuote)='quoteDelete($event,i)'></app-quote-detail>
+                <!-- <button class="btn btn-outline-light" (click)='toggleDetails(i)'>Toggle Details</button> -->
+                <app-quote-detail [quote]='quote' (deleteQuote)='quoteDelete($event,i)'></app-quote-detail>
                 <hr>
             </div>
         </div>

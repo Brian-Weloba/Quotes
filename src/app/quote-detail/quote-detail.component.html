@@ -1,9 +1,10 @@
 <br>
 <p>Posted by {{quote.user}} on {{quote.date|date}}.<br>{{quote.date|dateCount}} days ago.</p>
 <div class=" btn-group " role="group " aria-label="Basic example ">
-    <button type="button" class="btn btn-outline-success" (click)='upvote()'>{{quote.upvotes}} Upvote</button>
-    <button type="button" class="btn btn-outline-light">{{quote.score}}</button>
-    <button type="bitton" class="btn btn-outline-danger" (click)='downvote()'>{{quote.downvotes}} Downvote</button>
+    <button id="vote" type="button" class="btn btn-outline-success" (click)='upvote()'>{{quote.upvotes}} Upvote</button>
+    <button id="point" type="button" class="btn btn-outline-light" *ngIf="quote.score===1||quote.score===-1">{{quote.score}} Point</button>
+    <button id="point" type="button" class="btn btn-outline-light" *ngIf="quote.score!=1&&quote.score!=-1">{{quote.score}} Points</button>
+    <button id="vote" type="bitton" class="btn btn-outline-danger" (click)='downvote()'>{{quote.downvotes}} Downvote</button>
 </div>
 <div>
     <br>
