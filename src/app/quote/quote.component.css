@@ -55,6 +55,7 @@ button {
     background-color: #eef0f2;
     margin: 0px;
     padding-left: 50px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .2);
 }
 
 
