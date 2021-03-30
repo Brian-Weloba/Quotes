@@ -27,7 +27,7 @@ export class QuoteComponent implements OnInit {
     this.current = 0
 
     for (this.count = 0; this.count < this.quotes.length; this.count++) {
-      this.current = this.quotes[this.count].score;
+      this.current = this.quotes[this.count].upvotes;
       if (this.current > this.most) { this.most = this.current }
     }
     return this.most

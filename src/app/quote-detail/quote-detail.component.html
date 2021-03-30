@@ -1,7 +1,11 @@
-<p>Posted by {{quote.user}} on {{quote.date|date}}.{{quote.date|dateCount}} days ago.</p>
-<button (click)='upvote()'>Like</button>
-<p>{{quote.upvotes}} upvotes</p>
-<h4>{{quote.score}}</h4>
-<p>{{quote.downvotes}} downvotes</p>
-<button (click)='downvote()'>Dislike</button>
-<button (click)='quoteDelete(true)'>Delete Quote</button>
+<br>
+<p>Posted by {{quote.user}} on {{quote.date|date}}.<br>{{quote.date|dateCount}} days ago.</p>
+<div class=" btn-group " role="group " aria-label="Basic example ">
+    <button type="button" class="btn btn-success" (click)='upvote()'>{{quote.upvotes}} Upvote</button>
+    <button type="button" class="btn btn-primary">{{quote.score}}</button>
+    <button type="bitton" class="btn btn-danger" (click)='downvote()'>{{quote.downvotes}} Downvote</button>
+</div>
+<div>
+    <br>
+    <button class="btn btn-secondary" (click)='quoteDelete(true)'>Delete Quote</button>
+</div>

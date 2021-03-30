@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Quotes';
+
+  constructor(){
+    document.body.style.background = '#353b3c';
+  }
 }

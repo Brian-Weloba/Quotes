@@ -1,26 +1,28 @@
-<div class="container">
+<div id="main" class="container">
     <h1>Quotes</h1>
     <div class="row">
-        <div class="col-md-6">
-            <div *ngFor='let quote of quotes; let i = index'>
+        <div class="col-lg-6 row-element-1">
+            <hr>
+            <div class="cards" *ngFor='let quote of quotes; let i = index'>
                 <div id="quote">
-                    <div>
-                        <div appHighlight *ngIf="highestScore()===quote.score && quote.score>0">
-                            <h2>{{i+1}}. {{quote.quote}}</h2>
-                            <h4>~{{quote.author}}</h4>
-                        </div>
-                        <div *ngIf="highestScore()!==quote.score || quote.score==0">
-                            <h2>{{i+1}}. {{quote.quote}}</h2>
-                            <h4>~{{quote.author}}</h4>
-                        </div>
-                    </div>
-                    <button (click)='toggleDetails(i)'>Show Details</button>
-                    <app-quote-detail *ngIf='quote.showDetails' [quote]='quote' (deleteQuote)='quoteDelete($event,i)'></app-quote-detail>
                 </div>
-
+                <div>
+                    <div id="highlighted" appHighlight *ngIf="highestScore()===quote.upvotes && quote.upvotes>0">
+                        <h2>{{i+1}}. "{{quote.quote | uppercase}}"</h2>
+                        <h4>~{{quote.author|uppercase}}</h4>
+                    </div>
+                    <div *ngIf="highestScore()!==quote.upvotes || quote.upvotes==0">
+                        <h2>{{i+1}}. "{{quote.quote | uppercase}}"</h2>
+                        <h4>~{{quote.author |uppercase}}</h4>
+                    </div>
+                </div>
+                <button class="btn btn-outline-light" (click)='toggleDetails(i)'>Toggle Details</button>
+                <app-quote-detail *ngIf='quote.showDetails' [quote]='quote' (deleteQuote)='quoteDelete($event,i)'></app-quote-detail>
+                <hr>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6 row-element-2">
             <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
     </div>
+</div>
