@@ -45,20 +45,20 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Behavioral specifications:
 >**As** a user.  
 >**I want to** Post a new quote  
->**so** that I can see how popular it is
+>**so** that I can see how popular it is  
   
->**when** I input the quote, its author and my name 
->**and** click submit
->**then** I should see my quote on the list
+>**when** I input the quote, its author and my name  
+>**and** click submit  
+>**then** I should see my quote on the list  
 
 >**Given** that I want to vote  
->**when** I toggle details and choose to upvote/downvote
->**then** I should see the score go up or down respectively
+>**when** I toggle details and choose to upvote/downvote  
+>**then** I should see the score go up or down respectively  
 
 >**Given** that I want to see the most popular quote  
->**and** I haven't already voted 
->**when** I vote on a quote
->**and** the quote has the most upvotes
+>**and** I haven't already voted  
+>**when** I vote on a quote  
+>**and** the quote has the most upvotes  
 >**then** it should highlight the quote with the most upvotes   
 
 ## Contact
