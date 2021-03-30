@@ -43,40 +43,25 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## BDD
 
 Behavioral specifications:
->**Title**: Get Akan name
+>**Title**: Add quote
 
 >**As** a user.  
->**I want to** I input my date of birth.  
->**so** that I can get my Akan name  
+>**I want to** Post a new quote  
+>**so** that I can see how popular it is
+  
+>**when** I input the quote, its author and my name 
+>**and** click submit
+>**then** I should see my quote on the list
 
->**Scenario 1:** Male user  
->**Given** that I am male  
->**and** I was born on 14/2/1998  
->**when** I input my date of birth  
->**and** I select my gender as Male.  
->**then** I should get my akan name is Kwame  
->**and** I was born on a Saturday.  
+>**Given** that I want to vote  
+>**when** I toggle details and choose to upvote/downvote
+>**then** I should see the score go up or down respectively
 
->**Scenario 2:** Female user  
->**Given** that I am female  
->**and** I was born on 25/5/1989  
->**when** I input my date of birth  
->**and** I select my gender as Female.  
->**then** I should get my akan name is Yaa  
->**and** I was born on a Thursday.  
-
->**Scenario 3:** Fail to select genger.  
->**Given** that I am female  
->**and** I was born on 25/5/1989  
->**when** I input my date of birth  
->**and** I fail to select my gender as Female.  
->**then** I should get an error message.  
-
->**Scenario 4:** Dates before October 1582.  
->**Given** that I want to know the Akan name of someone born before 1582
->**when** I input my date of birth  
->**and** I fail to select my gender as Female.  
->**then** I should not get an error because the Gregorian system wasnt invented  
+>**Given** that I want to see the most popular quote  
+>**and** I haven't already voted 
+>**when** I vote on a quote
+>**and** the quote has the most upvotes
+>**then** it should highlight the quote with the most upvotes   
 
 ## Contact
 
