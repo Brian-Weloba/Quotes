@@ -10,7 +10,10 @@ export class QuoteComponent implements OnInit {
 
   quoteDelete(deleteQuote, index) {
     if (deleteQuote) {
-      this.quotes.splice(index, 1);
+      let toDelete = confirm(`Are you sure you want to delete this quote by ${this.quotes[index].author}?`)
+      if (toDelete) {
+        this.quotes.splice(index, 1);
+      }
     }
   }
 
@@ -41,7 +44,7 @@ export class QuoteComponent implements OnInit {
     new Quote('Show me a sane man and I will cure him for you.', 'Carl Jung', 'Denzel', new Date(2021, 2, 15))
   ];
 
-  addNewQuote(newQuote){
+  addNewQuote(newQuote) {
     newQuote.date = new Date(newQuote.date);
     this.quotes.push(newQuote);
   }
