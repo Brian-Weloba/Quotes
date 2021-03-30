@@ -43,8 +43,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## BDD
 
 Behavioral specifications:
->**Title**: Add quote
-
 >**As** a user.  
 >**I want to** Post a new quote  
 >**so** that I can see how popular it is
