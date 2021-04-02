@@ -17,7 +17,7 @@
     border-radius: 20px;
     border: 6px solid rgba ( 0, 0, 0, 1);
     padding: 20px;
-    background-color: #353b3c;
+    background-color: #11262e;
 }
 
 hr {
@@ -52,7 +52,7 @@ button {
     width: 100%;
     z-index: 1;
     color: #353b3c;
-    background-color: #eef0f2;
+    background-color: #11262e;
     margin: 0px;
     padding-left: 50px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, .2);
