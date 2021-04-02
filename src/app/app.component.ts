@@ -9,6 +9,6 @@ export class AppComponent {
   title = 'Quotes';
 
   constructor(){
-    document.body.style.background = '#000';
+    document.body.style.background = '#od1117';
   }
 }
